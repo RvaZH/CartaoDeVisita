@@ -9,9 +9,9 @@ function toggleMode(){
     }
 
     if(body.classList.contains("light")){
-        img.setAttribute('src', '././vscode/Mobile/Avatar2.png')
+        img.setAttribute('src', 'Avatar2.png')
     }
     else{
-        img.setAttribute('src', '././vscode/Mobile/avatar.png')
+        img.setAttribute('src', 'avatar.png')
     }
 }
