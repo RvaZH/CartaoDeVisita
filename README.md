@@ -33,7 +33,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 O Dev Links é um agregador de links que serve como um cartão de visita online.
-O Projeto que está adicionado é o feito pela Rocktseat, o projeto que está comigo tem ligeiras diferenças.
+O Projeto que está adicionado é o feito pela Rocktseat, o projeto que está comigo tem ligeiras diferenças.Segue o link abaixo:
+Link: https://rvazh.github.io/cartaodevisita/
 
 ## 🔖 Layout
 
