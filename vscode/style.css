@@ -1,0 +1,230 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: white;
+    --bg-url:url(./assets/bg-mobile-light.jpg);
+    --bg-color: rgba(255, 255, 255, 0.1);
+    --bg-colorH:rgba(255, 255, 255, 0.3);
+    --surface-color-hover-icon: rgba(255, 255, 255, 0.1);
+    --switch-svg: url(./assets/moon-star.svg);
+}
+
+.light{
+    --text-color: black;
+    --bg-url:url(./assets/bg-mobile.jpg);
+    --bg-color: rgba(0, 0, 0, 0.3);
+    --bg-colorH:rgba(0, 0, 0, 0.5);
+    --surface-color-hover-icon: rgba(0, 0, 0, 0.3);
+    --switch-svg: url(./assets/sun.svg);
+    
+   
+}
+
+body {
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+body * {
+    font-family: 'Inter Tight', sans-serif;
+    color:var(--text-color);
+    
+}
+
+#container1 {
+    
+    width: 100%;
+    max-width: 360px;
+    margin: 0px auto 0px;
+    padding: 0px 24px;
+    
+    
+}
+
+#switch{    
+    width:  64px;
+    position: relative;
+    margin: 4px auto;
+}
+
+/* Switch */
+#switch button{
+
+    width: 32px;
+    height: 32px;
+    background: #ffffff var(--switch-svg) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    transform:translateY(-50%);
+    top: 50%;
+
+    animation: slide-on 0.4s ;
+
+    
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--bg-color) ;
+    border: 2px solid var(--bg-colorH);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+}
+
+.light #switch button{
+    animation: slide-in 0.4s forwards;
+} 
+
+#switch button:hover{
+    outline: 8px solid var(--bg-colorH);
+    
+}
+
+
+
+/* Perfil */
+#profile {
+    text-align: center;
+    padding: 24px;
+    
+}
+
+#profile img{
+    width: 100px;
+    
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+    
+}
+
+/* Botoes*/
+ul{
+   
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    padding: 5px 0px;
+
+}
+
+ul li a {
+    display: flex;
+    justify-content: center;
+
+    
+    padding: 16px;
+
+    border-radius: 8px; 
+    background-color: var(--bg-color);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+
+    text-decoration: none ;
+    font-weight: 500 ;
+
+    transition: background 0.3s;
+    transition: padding 0.5s;
+}
+
+ul li a:hover{
+    background-color: var(--bg-colorH);
+    padding: 22px;
+   
+}
+
+/* Icones */ 
+#social_icons{
+   
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+
+    padding: 24px 0px;
+
+    font-size: 28px;
+     
+    
+    
+}
+
+#social_icons a{
+   
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    transition: background 0.2s;
+    
+
+}
+
+#social_icons a:hover{
+    background-color: var(--surface-color-hover-icon);
+   
+}
+
+/*Rodapé*/
+footer {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+
+    
+}
+
+@media (min-width: 700px){
+    :root{
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+
+    .light{
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+
+    
+}
+
+@keyframes slide-on{
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
+
+    
+}
+
+
+
